@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter, Switch, Link, Route } from "react";
-import { container } from "webpack";
 
 export function Home() {
 	return (
-		<container>
+		<div className="container justify-content-between d-flex">
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="..." className="card-img-top" alt="..." />
 				<div className="card-body">
@@ -17,7 +16,7 @@ export function Home() {
 					</a>
 				</div>
 			</div>
-			), (
+
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="..." className="card-img-top" alt="..." />
 				<div className="card-body">
@@ -30,7 +29,7 @@ export function Home() {
 					</a>
 				</div>
 			</div>
-			), (
+
 			<div className="card" style={{ width: "18rem" }}>
 				<img src="..." className="card-img-top" alt="..." />
 				<div className="card-body">
@@ -43,6 +42,6 @@ export function Home() {
 					</a>
 				</div>
 			</div>
-		</container>
+		</div>
 	);
 }
