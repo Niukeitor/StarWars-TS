@@ -20,9 +20,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+				fetch("https://www.swapi.tech/api/people/")
+					.then(res => res.json())
+					.then(data => setStore({ people: data.results }));
+				fetch("https://www.swapi.tech/api/planets/")
+					.then(res => res.json())
+					.then(data => setStore({ planets: data.results }));
+				fetch("https://www.swapi.tech/api/vehicles/")
+					.then(res => res.json())
+					.then(data => setStore({ vehicles: data.results }));
+				const store = getStore();
+				console.log(store);
 			},
 			changeColor: (index, color) => {
 				//get the store
