@@ -1,15 +1,15 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+import { Carta } from "../component/carta";
+import { array } from "prop-types";
 export function InfoPlanets() {
+	const { store, actions } = useContext(Context);
 	return (
-		<div className="card text-white bg-primary mb-3" style={{ maxWidth: "18rem" }}>
-			<div className="card-header">Header</div>
-			<div className="card-body">
-				<h5 className="card-title">Primary card title</h5>
-				<p className="card-text">
-					Some quick example text to build on the card title and make up the bulk of the cards content.
-				</p>
-			</div>
+		<div className=" justify-content-between d-flex">
+			{" "}
+			{store.vehicle.map((elemento, index, array) => {
+				return <Carta key={elemento.uid} nombre={elemento.url} />;
+			})}
 		</div>
 	);
 }
