@@ -33,8 +33,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://www.swapi.tech/api/vehicles/")
 					.then(res => res.json())
 					.then(data => setStore({ vehicles: data.results }));
-				const store = getStore();
-				console.log(store);
 			},
 			changeColor: (index, color) => {
 				//get the store
