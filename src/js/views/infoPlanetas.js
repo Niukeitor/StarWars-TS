@@ -9,7 +9,7 @@ export function InfoPlanetas(props) {
 	const { id } = useParams();
 
 	useEffect(() => {
-		fetch(store.people[id - 1].url)
+		fetch(store.planets[id - 1].url)
 			.then(resp => resp.json())
 			.then(data => setInfo(data.result.properties))
 			.catch(error => console.log(error));
