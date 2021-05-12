@@ -12,7 +12,17 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-primary">Favorito</button>
+					<div className="btn-group">
+						<button
+							type="button"
+							className="btn btn-danger dropdown-toggle"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Favoritos
+						</button>
+						<div className="dropdown-menu" />
+					</div>
 				</Link>
 			</div>
 		</nav>

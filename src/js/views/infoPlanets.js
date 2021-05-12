@@ -7,8 +7,8 @@ export function InfoPlanets() {
 	return (
 		<div className=" justify-content-between d-flex">
 			{" "}
-			{store.vehicle.map((elemento, index, array) => {
-				return <Carta key={elemento.uid} nombre={elemento.url} />;
+			{store.planets.map((elemento, index, array) => {
+				return <Carta key={elemento.uid} url={elemento.url} />;
 			})}
 		</div>
 	);
