@@ -49,7 +49,7 @@ export function Home() {
 					<p className="card-text">
 						Aqui podra encontrar toda la informacion sobre los vehiculos de la trama.
 					</p>
-					<Link to="/vehicles">
+					<Link to="/vehiculos">
 						<button className="btn btn-primary">Mas informacion</button>
 					</Link>
 				</div>

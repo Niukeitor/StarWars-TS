@@ -1,14 +1,17 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-import { Vehiculos } from "./views/vehiculos";
+
 import { InfoPersonajes } from "./views/infoPersonaje";
-import { InfoPlanets } from "./views/infoPlanets";
+import { InfoPlanetas } from "./views/infoPlanetas";
+import { InfoVehiculos } from "./views/infoVehiculos";
+
 import { Personajes } from "./views/personajes";
 import { Planetas } from "./views/planetas";
+import { Vehiculos } from "./views/vehiculos";
+
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -29,14 +32,13 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/infoplanet">
-							<Home />
+						<Route exact path="/infoPlanetas/:id">
+							<InfoPlanetas />
 						</Route>
-
-						<Route exact path="/vehicles">
-							<Vehiculos />
+						<Route exact path="/infoVehiculos/:id">
+							<InfoVehiculos />
 						</Route>
-						<Route path="/infoPersonajes/:id">
+						<Route exact path="/infoPersonajes/:id">
 							<InfoPersonajes />
 						</Route>
 						<Route exact path="/peoples">
@@ -45,11 +47,8 @@ const Layout = () => {
 						<Route exact path="/planets">
 							<Planetas />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
-						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/vehiculos">
+							<Vehiculos />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export function InfoPersonajes(props) {
+export function InfoPlanetas(props) {
 	const [info, setInfo] = useState({});
 	const { store, actions } = useContext(Context);
 	const { id } = useParams();
@@ -28,16 +28,12 @@ export function InfoPersonajes(props) {
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
-							<h5 className="card-title">{info.name}</h5>
-							<p className="card-text">
-								Luke Skywalker fue un humano sensible a la Fuerza y un Maestro Jedi quien, junto a su
-								hermana gemela, la Princesa Leia Organa, luchó en contra del gobierno del Imperio
-								Galáctico durante la Guerra Civil Galáctica. Hijo del Caballero Jedi Anakin Skywalker y
-								de la Senadora Padmé Amidala de Naboo, Luke nació poco después del final de la Guerras
-								Clon el 19 ABY.
-							</p>
 							<ul>
-								<li>Altura: {info.height}</li>
+								<li>Nombre: {info.name}</li>
+								<li>Altura: {info.rotation_period}</li>
+								<li>Altura: {info.orbital_period}</li>
+								<li>Altura: {info.diameter}</li>
+								<li>Altura: {info.climate}</li>
 							</ul>
 						</div>
 					</div>
@@ -47,6 +43,6 @@ export function InfoPersonajes(props) {
 	);
 }
 
-InfoPersonajes.propTypes = {
+InfoPlanetas.PropTypes = {
 	nombre: PropTypes.string
 };

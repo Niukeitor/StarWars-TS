@@ -7,7 +7,7 @@ export function Carta(props) {
 			<img src={props.imagen} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">{props.nombre}</h5>
-				<Link to={`/infoPersonajes/${props.id}`}>
+				<Link to={`${props.baseurl}/${props.id}`}>
 					<button className="btn btn-success">Mas Info</button>
 				</Link>
 			</div>
@@ -18,5 +18,6 @@ Carta.propTypes = {
 	nombre: PropTypes.string,
 	imagen: PropTypes.string,
 	link: PropTypes.string,
-	id: PropTypes.string
+	id: PropTypes.string,
+	baseurl: PropTypes.string
 };
