@@ -16,29 +16,28 @@ export function InfoPersonajes(props) {
 	}, []);
 
 	return (
-		<div className="container justyfi-content-center">
-			<div className="card mb-3" style={{ maxWidth: "620px" }}>
-				<div className="row no-gutters">
-					<div className="col-md-4">
-						<img
-							style={{ maxWidth: "100%" }}
-							src="https://smoda.elpais.com/wp-content/uploads/2019/12/2-look-750x702.jpg"
-							alt="..."
-						/>
-					</div>
+		<div className="container">
+			<div className="card bg-dark text-white">
+				<img
+					src="https://as.com/meristation/imagenes/2019/11/21/noticias/1574336961_955124_1574337025_noticia_normal.jpg"
+					className="card-img"
+					alt="..."
+				/>
+				<div className="card-img-overlay">
 					<div className="col-md-8">
 						<div className="card-body">
 							<h5 className="card-title">{info.name}</h5>
-							<p className="card-text">
-								Luke Skywalker fue un humano sensible a la Fuerza y un Maestro Jedi quien, junto a su
-								hermana gemela, la Princesa Leia Organa, luchó en contra del gobierno del Imperio
-								Galáctico durante la Guerra Civil Galáctica. Hijo del Caballero Jedi Anakin Skywalker y
-								de la Senadora Padmé Amidala de Naboo, Luke nació poco después del final de la Guerras
-								Clon el 19 ABY.
-							</p>
-							<ul>
-								<li>Altura: {info.height}</li>
-							</ul>
+							<div className="container">
+								<ul>
+									<li>Nombre: {info.name}</li>
+									<li>Altura: {info.height}</li>
+									<li>Peso: {info.mass}</li>
+									<li>Color de Pelo: {info.hair_color}</li>
+									<li>Color de Piel: {info.skin_color}</li>
+									<li>Color de Ojos: {info.eye_color}</li>
+									<li>Año de Nacimiento: {info.birth_year}</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

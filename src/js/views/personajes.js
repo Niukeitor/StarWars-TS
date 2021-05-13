@@ -5,15 +5,17 @@ import { Carta } from "../component/carta";
 export function Personajes() {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className=" justify-content-between d-flex">
-			{" "}
-			{store.people.map((elemento, index, array) => {
-				return (
-					<div key={index}>
-						<Carta id={elemento.uid} nombre={elemento.name} baseurl={"/infoPersonajes"} />
-					</div>
-				);
-			})}
+		<div className="container">
+			<div className="card-columns">
+				{" "}
+				{store.people.map((elemento, index, array) => {
+					return (
+						<div key={index}>
+							<Carta id={elemento.uid} nombre={elemento.name} baseurl={"/infoPersonajes"} />
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 }

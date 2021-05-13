@@ -16,27 +16,26 @@ export function InfoPlanetas(props) {
 	}, []);
 
 	return (
-		<div className="container justyfi-content-center">
-			<div className="card mb-3" style={{ maxWidth: "620px" }}>
-				<div className="row no-gutters">
-					<div className="col-md-4">
-						<img
-							style={{ maxWidth: "100%" }}
-							src="https://smoda.elpais.com/wp-content/uploads/2019/12/2-look-750x702.jpg"
-							alt="..."
-						/>
-					</div>
-					<div className="col-md-8">
-						<div className="card-body">
-							<ul>
-								<li>Nombre: {info.name}</li>
-								<li>Altura: {info.rotation_period}</li>
-								<li>Altura: {info.orbital_period}</li>
-								<li>Altura: {info.diameter}</li>
-								<li>Altura: {info.climate}</li>
-							</ul>
-						</div>
-					</div>
+		<div className="container">
+			<div className="card bg-dark text-white">
+				<img
+					src="https://p4.wallpaperbetter.com/wallpaper/251/800/13/planet-ring-satellites-star-system-wallpaper-preview.jpg"
+					className="card-img"
+					alt="..."
+				/>
+				<div className="card-img-overlay">
+					<h5 className="card-title">{info.name}</h5>
+					<ul>
+						<li>Nombre: {info.name}</li>
+						<li>Rotacion: {info.rotation_period}</li>
+						<li>Orbita: {info.orbital_period}</li>
+						<li>Diametro: {info.diameter}</li>
+						<li>Clima: {info.climate}</li>
+						<li>Gravedad: {info.gravity}</li>
+						<li>Terreno: {info.terrain}</li>
+						<li>Superficie del agua: {info.surface_water}</li>
+						<li>Popularidad: {info.population}</li>
+					</ul>
 				</div>
 			</div>
 		</div>
