@@ -1,25 +1,17 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			people: [],
 			planets: [],
 			vehicles: [],
-			vehicles_detail: []
+			vehicles_detail: [],
+			favorito: []
 		},
 
 		actions: {
+			agregarFav: favorito => {
+				console.log(favorito);
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

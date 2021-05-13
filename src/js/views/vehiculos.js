@@ -7,12 +7,19 @@ export function Vehiculos() {
 
 	return (
 		<div className="container">
-			<div className="card-columns">
+			<div className="row">
 				{" "}
 				{store.vehicles.map((elemento, index, array) => {
 					return (
 						<div key={index}>
-							<Carta id={elemento.uid} nombre={elemento.name} baseurl={"/infoVehiculos"} />
+							<Carta
+								img={
+									"https://db-api.elestimulo.com/app/uploads/2015/12/nave-star-wars-ub-feature-1-1100x572.jpg"
+								}
+								id={elemento.uid}
+								nombre={elemento.name}
+								baseurl={"/infoVehiculos"}
+							/>
 						</div>
 					);
 				})}

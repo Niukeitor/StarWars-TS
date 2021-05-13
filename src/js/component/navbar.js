@@ -10,8 +10,8 @@ export const Navbar = () => {
 					<img src="http://www.unioncosmos.com/wp-content/uploads/2016/05/union-cosmos-Star-Wars-png-transparente-300x165.png" />
 				</div>
 			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
+			<div className="container mx-5">
+				<div className="ml-auto">
 					<div className="btn-group">
 						<button
 							type="button"
@@ -23,7 +23,7 @@ export const Navbar = () => {
 						</button>
 						<div className="dropdown-menu" />
 					</div>
-				</Link>
+				</div>
 			</div>
 		</nav>
 	);

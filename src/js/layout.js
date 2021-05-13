@@ -32,6 +32,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
+
 						<Route exact path="/infoPlanetas/:id">
 							<InfoPlanetas />
 						</Route>
