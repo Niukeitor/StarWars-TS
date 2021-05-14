@@ -19,7 +19,7 @@ export function InfoPersonajes(props) {
 		<div className="container">
 			<div className="card bg-dark text-white">
 				<img
-					src="https://as.com/meristation/imagenes/2019/11/21/noticias/1574336961_955124_1574337025_noticia_normal.jpg"
+					src="https://i.pinimg.com/originals/98/26/6b/98266b3c4289ea0ef641096358881b7a.gif"
 					className="card-img"
 					alt="..."
 				/>

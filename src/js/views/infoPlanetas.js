@@ -19,7 +19,7 @@ export function InfoPlanetas(props) {
 		<div className="container">
 			<div className="card bg-dark text-white">
 				<img
-					src="https://p4.wallpaperbetter.com/wallpaper/251/800/13/planet-ring-satellites-star-system-wallpaper-preview.jpg"
+					src="https://www.laguiadelvaron.com/wp-content/uploads/2016/12/s-media-cache-ak0.pinimg.com-cc400d4a208e553f11e7931354fa3311.gif"
 					className="card-img"
 					alt="..."
 				/>

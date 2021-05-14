@@ -17,7 +17,7 @@ export function Carta(props) {
 
 					<button
 						onClick={() => {
-							actions.agregarFav("luk");
+							actions.agregarFav(props.nombre);
 						}}
 						className="btn btn-warning mx-5">
 						<i className="far fa-heart" />{" "}
