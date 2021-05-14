@@ -26,7 +26,7 @@ export function InfoVehiculos(props) {
 		<div className="container">
 			<div className="card bg-dark text-white">
 				<img
-					src="https://elcomercio.pe/resizer/m65N7fg8VlH8H8DwQNC0HDphoa4=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/AEZOY5MJKFAQDGKXTVLPHZKDZE.jpg"
+					src="https://s3-eu-west-1.amazonaws.com/cinemania-s3b/wp-content/uploads/2015/12/24153225/ezgif.com-crop.gif"
 					className="card-img"
 					alt="..."
 				/>

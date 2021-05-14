@@ -13,8 +13,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				if (getStore().favorito.includes(favorito)) {
 					console.log("ya existe");
 				} else {
-					getStore().favorito.push(favorito);
-					console.log(getStore().favorito);
+					let nuevoFavorito = [...getStore().favorito, favorito];
+					setStore({
+						favorito: nuevoFavorito
+					});
 				}
 			},
 			// Use getActions to call a function within a fuction

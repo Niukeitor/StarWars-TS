@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import PropTypes from "prop-types";
+import PropTypes, { array, element } from "prop-types";
 import { Link } from "react-router-dom";
 export function Carta(props) {
 	const { store, actions } = useContext(Context);
@@ -27,6 +27,7 @@ export function Carta(props) {
 		</div>
 	);
 }
+
 Carta.propTypes = {
 	nombre: PropTypes.string,
 	link: PropTypes.string,
