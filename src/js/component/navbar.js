@@ -28,14 +28,15 @@ export const Navbar = () => {
 								store.favorito.map((elemento, index, array) => {
 									return (
 										<a key={index} className="dropdown-item" href="#">
+											<button>
+												<i className="fas fa-trash" />
+											</button>
 											{elemento}
 										</a>
 									);
 								})
 							) : (
-								<a className="dropdown-item" href="#">
-									no hay favorito
-								</a>
+								<a className="dropdown-item" href="#" />
 							)}
 						</div>
 					</div>
