@@ -19,6 +19,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				}
 			},
+			actions: {
+				deleteFav: favorito => {
+					if (getStore().favorito.delete(favorito)) {
+						console.log("eliminado");
+					} else {
+						let deleteFav = [...getStore().favorito, favorito];
+						getStore({
+							favorito: deleteFav
+						});
+					}
+				}
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

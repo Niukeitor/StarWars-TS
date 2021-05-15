@@ -28,9 +28,6 @@ export const Navbar = () => {
 								store.favorito.map((elemento, index, array) => {
 									return (
 										<a key={index} className="dropdown-item" href="#">
-											<button>
-												<i className="fas fa-trash" />
-											</button>
 											{elemento}
 										</a>
 									);
@@ -38,6 +35,20 @@ export const Navbar = () => {
 							) : (
 								<a className="dropdown-item" href="#" />
 							)}
+
+							<div className="delet-button">
+								{store.delFavorito > 0 ? (
+									store.delFavorito.map((elemento, index, array) => {
+										return (
+											<a key={index} className="delete-button" href="#">
+												{elemento}
+											</a>
+										);
+									})
+								) : (
+									<i className="fas fa-trash" />
+								)}
+							</div>
 						</div>
 					</div>
 				</div>
