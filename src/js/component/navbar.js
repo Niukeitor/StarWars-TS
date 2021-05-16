@@ -27,28 +27,22 @@ export const Navbar = () => {
 							{store.favorito.length > 0 ? (
 								store.favorito.map((elemento, index, array) => {
 									return (
-										<a key={index} className="dropdown-item" href="#">
-											{elemento}
-										</a>
+										<div
+											key={index}
+											className="dropdown-item d-flex align-items-center justify-content-around">
+											<a href="#">{elemento}</a>
+											<i
+												onClick={() => {
+													actions.deleteFav(elemento);
+												}}
+												className="fas fa-trash"
+											/>
+										</div>
 									);
 								})
 							) : (
 								<a className="dropdown-item" href="#" />
 							)}
-
-							<div className="delet-button">
-								{store.delFavorito > 0 ? (
-									store.delFavorito.map((elemento, index, array) => {
-										return (
-											<a key={index} className="delete-button" href="#">
-												{elemento}
-											</a>
-										);
-									})
-								) : (
-									<i className="fas fa-trash" />
-								)}
-							</div>
 						</div>
 					</div>
 				</div>

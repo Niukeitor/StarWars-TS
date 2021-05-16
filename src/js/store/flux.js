@@ -19,17 +19,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				}
 			},
-			actions: {
-				deleteFav: favorito => {
-					if (getStore().favorito.delete(favorito)) {
-						console.log("eliminado");
-					} else {
-						let deleteFav = [...getStore().favorito, favorito];
-						getStore({
-							favorito: deleteFav
-						});
+
+			deleteFav: favorito => {
+				let i = 0;
+				let nuevoFavorito = [...getStore().favorito];
+				while (i < getStore().favorito.length) {
+					if (getStore().favorito[i] == favorito) {
+						nuevoFavorito.splice(i, 1);
 					}
+					i++;
 				}
+				setStore({
+					favorito: nuevoFavorito
+				});
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
