@@ -32,7 +32,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					favorito: nuevoFavorito
 				});
-			},
+            },
+            login: async(mail, pass) => {
+                  var myHeaders = new Headers();
+                  myHeaders.append("Content-Type","application/json");
+
+                  var raw = JSON.stringify({
+                      "email": mail,
+                      "password": pass
+                  });
+            
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            const resLogin = await fetch(process.env.URL_BACK + "/login", requestOptions)
+            const data = await resLogin.json();
+            console.log(data);
+        },
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
